@@ -1,0 +1,17 @@
+page-nouvelle-course {
+    .scroll{
+        height: 100%;
+    }
+    #map{
+        width: 100%;
+        height: 100%;
+    }
+}
+html{
+    body{
+        h1{font-size: 18px;}
+        .container{
+            &:before{content: ""}
+        }
+    }
+}

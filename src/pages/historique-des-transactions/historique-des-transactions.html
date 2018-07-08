@@ -8,33 +8,14 @@
 <ion-content padding id="page3">
   <div id="historiqueDesTransactions-container2">
     <form id="historiqueDesTransactions-form1">
-      <ion-item id="historiqueDesTransactions-select1">
-        <ion-label>
-          Transactions
-        </ion-label>
-        <ion-select name="">
-          <ion-option>
-            du mois dernier
-          </ion-option>
-          <ion-option>
-            des 6 derniers mois
-          </ion-option>
-          <ion-option></ion-option>
-          <ion-option>
-            depuis toujours
-          </ion-option>
-        </ion-select>
-      </ion-item>
       <div class="spacer" style="width:300px;height:34px;" id="historiqueDesTransactions-spacer1"></div>
       <ion-list id="historiqueDesTransactions-list4">
-        <ion-item color="none" id="historiqueDesTransactions-list-item11">
-          Item 1
-        </ion-item>
-        <ion-item color="none" id="historiqueDesTransactions-list-item12">
-          Item 2
-        </ion-item>
-        <ion-item color="none" id="historiqueDesTransactions-list-item13">
-          Item 3
+        <ion-item  *ngFor="let event of eventList" (click)="goToEventDetail(event.id)" color="none" id="historiqueDesTransactions-list-item11">
+          <h2>Driver Name => {{event?.name}}</h2>
+          <h3>Price => <strong>NGN{{event?.price}}</strong></h3>
+          <h3>Date => <strong>{{event?.date}}</strong></h3>
+          <h3>Location => <strong>{{event?.location}}</strong></h3>
+          <h3>Destination => <strong>{{event?.destination}}</strong></h3>
         </ion-item>
       </ion-list>
     </form>
